@@ -106,6 +106,7 @@ def issue_body(iss, rel, issue_dir_rel):
             f'<span><a href="{pdf}">Download the PDF</a></span></div>'
             f'<article class="sheet">{inner}</article></main>')
 
+css = css.replace("'Inter Display'", "'Inter',sans-serif").replace("'Lora'", "'Lora'")
 open(os.path.join(ROOT, "site.css"), "w").write(FONT_FIX + css + WEB_CSS)
 
 urls = []
